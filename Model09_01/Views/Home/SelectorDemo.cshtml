@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectorDemo</title>
+    <style>
+        .xx
+        {
+           color: red;
+           background-color: yellow;
+           font-size: 36px ;  
+        }
+    </style>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(function () {
+            //$("h1").css("color", "red");
+            //$("#div1").css("border","1px solid blue");
+            //$(".myclass").css("color","green");
+            $("#Button1").bind("click", function () {
+                $("h1").addClass("xx");
+                //$("h1").css({
+                //    color: "red",
+                //    "background-color": "yellow",
+                //    "font-size": "36px"
+                //});
+            });
+
+
+            $("#Button2").click( function () {
+                $("h1").removeClass("xx");
+                //$("h1").css({
+                //    color: "red",
+                //    "background-color": "yellow",
+                //    "font-size": "36px"
+                //});
+            });
+
+            //$("h1").css({
+            //    color: "red",
+            //    "background-color": "yellow",
+            //    "font-size":"36px"
+            //});
+        });
+    </script>
+</head>
+<body>
+    <input id="Button1" type="button" value="Change Style" />
+    <input id="Button2" type="button" value="Reset Style" />  
+  
+      <div id="div1">
+        <h1>Database</h1>
+        <div class="myclass">
+            SQL
+        </div>
+        <h1>Programming</h1>
+        <div class="myclass">
+            ASP.NET MVC
+        </div>
+        <h1>Management</h1>
+        <div class="myclass">
+            PMP
+        </div>
+    </div>
+</body>
+</html>
